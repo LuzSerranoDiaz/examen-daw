@@ -13,6 +13,6 @@ source .env
 apt install mysql-server -y
 
 #configuramos el parametro bind-address
-sed -i "s/127.0.0.1/$WORDPRESS_DB_HOST/" /etc/mysql/mysql.conf.d/mysqld.cnf
+sed -i "s/127.0.0.1/$DB_HOST/" /etc/mysql/mysql.conf.d/mysqld.cnf
 #reiniciamos el servicio
 systemctl restart mysql
